@@ -94,13 +94,13 @@ img {
   justify-content: center;
   align-items: center;
   justify-content: flex-start;
-  gap: 63.42px;
+  gap: 60px;
 }
 
-.banner__wr__bimage {
-  background: url(./img/man1.png);
+.banner__wrapper-image {
+  max-width: 100%;
   width: 600px;
-  height: 764px;
+  /* height: 764px; */
 }
 
 .banner__right__text {
@@ -144,11 +144,15 @@ img {
   margin-bottom: 96px;
 }
 
-.card1 {
-  background-image: url(./img/line1_w1.png);
+.card {
   background-repeat: no-repeat;
   width: 360px;
-  height: 260px;
+  max-width: 100%;
+  background-size: cover;
+}
+
+.card1 {
+  background-image: url(./img/line1_w1.png);
 }
 
 .line1__background {
@@ -205,14 +209,10 @@ img {
 
 .card2 {
   background-image: url(./img/line1_m1.png);
-  width: 360px;
-  height: 260px;
 }
 
 .card3 {
   background-image: url(./img/line1_kid.png);
-  width: 360px;
-  height: 260px;
 }
 
 .card4 {
@@ -309,6 +309,10 @@ img {
   padding: 11.29px 16px 8.73px 13.54px;
   border: #ffffff 1px solid;
   left: 30%;
+}
+
+.line2_card-img {
+  width: 360px;
 }
 
 /* line 2 card2 */
@@ -559,7 +563,7 @@ img {
   left: 30%;
 }
 
-/* line card 6 end */
+/* line2 card 6 end */
 
 .line2__text {
   padding: 28.8px 16.6px;
@@ -618,7 +622,7 @@ img {
   display: flex;
   flex-direction: row;
   gap: 30px;
-  margin-top: 104px;
+  margin-top: 103px;
   margin-bottom: 104px;
   text-align: center;
 }
@@ -652,23 +656,20 @@ img {
   font-style: normal;
   font-weight: 300;
   line-height: normal;
+  max-width: 360px;
 }
 
 .footer2 {
   background: url(./img/footer/Layer41.png) no-repeat center center fixed,
     lightgray 0px -169px / 100% 246.875%;
-  height: 448px;
   background-size: cover;
 }
-
-/* .footer2__background {
-  background:;
-} */
 
 .footer2__wrapper {
   display: flex;
   flex-direction: row;
-  gap: 223.26px;
+  justify-content: flex-start;
+  gap: 223px;
 }
 
 .footer2_item1 {
@@ -730,20 +731,24 @@ img {
   line-height: 167.2%;
 }
 
-.footer2__search {
+.footer2__mail-button {
   display: flex;
   flex-direction: row;
+  width: 356px;
 }
 
 .footer2__input {
-  border: none;
   color: #222224;
   font-family: Lato;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  background: url(./img/footer/Rounded\ Rectangle\ 5.png);
+  opacity: 0.671;
+  background: #e1e1e1;
+  border: none;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
   width: 256px;
   height: 49px;
   flex-shrink: 0;
@@ -751,12 +756,31 @@ img {
 }
 
 .footer2__button {
-  background: url(./img/footer/Rounded\ Rectangle\ 5\ copy.png);
+  background: #e05c6e;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
   width: 100px;
   height: 49px;
   flex-shrink: 0;
   border: none;
   color: #fff;
+  text-align: center;
+  font-family: Lato;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.footer2__button:hover {
+  background: #fff;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  width: 100px;
+  height: 49px;
+  flex-shrink: 0;
+  border: none;
+  color: #e05c6e;
   text-align: center;
   font-family: Lato;
   font-size: 14px;
@@ -780,6 +804,7 @@ img {
 .footer3_item1 {
   padding-top: 30px;
   padding-bottom: 30px;
+  width: 332px;
 }
 
 .footer3_item1 p {
@@ -800,7 +825,7 @@ img {
 }
 
 .footer3__item2__button {
-  background: url(./img/footer/Rectangle\ 14.png);
+  background: url(./img/footer/Rectangle\ 14_white.svg);
   width: 31.451px;
   height: 32px;
   flex-shrink: 0;
@@ -808,6 +833,10 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.footer3__item2__button:hover {
+  background: url(./img/footer/Rectangle\ 14_pink.svg);
 }
 
 @media (min-width: 770px) and (max-width: 1139.99px) {
@@ -823,14 +852,12 @@ img {
   #FASHION {
     font-size: 24px;
   }
-  .banner__wr__bimage {
-    background: url(./img/bsnner_man_tablet.png);
-    width: 386px;
-    height: 368px;
+  .banner__wrapper-image {
+    width: 289.5px;
   }
   .card {
     width: 232px;
-    height: 167px;
+    /* height: auto; */
   }
   .card4 {
     width: 100%;
@@ -853,11 +880,45 @@ img {
     gap: 15px;
     margin-bottom: 47.5px;
   }
+  .footer1__wrapper {
+    flex-direction: column;
+    gap: 48.3px;
+    margin-top: 48px;
+    margin-bottom: 64px;
+  }
+  .footer2__wrapper {
+    flex-direction: column;
+    gap: 48px;
+    margin-bottom: 140px;
+  }
+  .footer2_item1 {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    margin-top: 64px;
+    margin-bottom: 0;
+  }
+  .footer2_item2 {
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+  }
+  .footer3__wrapper {
+    gap: 305px;
+  }
+  .footer3_item1 {
+    width: 251px;
+  }
 }
 
 @media (min-width: 375px) and (max-width: 769.99px) {
   .container {
-    max-width: 344px;
+    max-width: 370px;
   }
   .header__right {
     display: none;
@@ -890,18 +951,6 @@ img {
     gap: 32px;
     margin-bottom: 64px;
   }
-  .card {
-    background-image: url(./img/line1_w1.png);
-    background-repeat: no-repeat;
-    width: 344px;
-    height: 249px;
-  }
-  .card2 {
-    background-image: url(./img/line1_m1.png);
-  }
-  .card3 {
-    background-image: url(./img/line1_kid.png);
-  }
   .card4 {
     width: 344px;
     height: 111px;
@@ -922,5 +971,53 @@ img {
     flex-direction: column;
     gap: 16.6px;
     margin-bottom: 60.56px;
+  }
+  .footer1__wrapper {
+    flex-direction: column;
+    gap: 46.8px;
+    margin-top: 48px;
+    margin-bottom: 81px;
+  }
+  .footer2__wrapper {
+    flex-direction: column;
+    gap: 59px;
+  }
+  .footer2_item1 {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    margin-top: 64px;
+    margin-bottom: 0;
+  }
+  .footer2_item2 {
+    gap: 22.5px;
+    align-items: center;
+    margin-top: 0px;
+    margin-bottom: 109px;
+    text-align: center;
+  }
+  .footer3__wrapper {
+    flex-direction: column-reverse;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 9px;
+  }
+  .footer3_item1 p {
+    text-align: center;
+  }
+  .footer3_item1 {
+    padding-top: 0;
+    padding-bottom: 0;
+    width: 251px;
+  }
+  .footer3_item2 {
+    display: flex;
+    flex-direction: row;
+    gap: 7.29px;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }
